@@ -1,0 +1,448 @@
+body{
+    font-family: "Alexandria", sans-serif;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    direction: rtl;
+    height: 10000px;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header{
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    font-size: 25px;
+}
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+.header ul li a i {
+    color: transparent;
+    transition: .3s;
+}
+.header ul li a:hover i{
+    color: red;
+}
+@media (max-width: 768px) {
+    .header{
+        background-color: transparent;
+        flex-direction: column;
+        position: static;
+
+    }
+    .header ul li a{
+        color: black;
+        display: block;
+        margin-bottom: 50px;
+        padding-top: 10px;
+        
+    }
+    .header ul{
+        flex-direction: column;
+        text-align: center;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        margin-left: -22px;
+        background-color: rgb(255, 255, 255);
+    }
+    .header ul i {
+        color: red;
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+.view{
+    background-image: url(st.jpg);
+    position: relative;
+    background-size: cover;
+    height: calc(100vh + 179px);
+}
+.view h1{
+    margin: 0;
+}
+.view .text-view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+    max-width: 100%;
+    width: 350px;
+}
+.view p{
+    color: white;
+    font-size: 25px;
+}
+.mathcs h1{
+    text-align: center;
+    font-size: 120px;
+    color: #232323;
+    
+}
+@media (max-width: 768px) {
+    .mathcs h1{
+        font-size: 70px;
+        margin-top: 80px;
+    }   
+    }
+.Results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: #232323;
+}
+.Results .one-Results .name-back{
+    background-color: orangered;
+    padding: 10px;
+}
+.Results .one-Results img{
+    width: 150px;
+}
+.Results .one-Results  span {
+    position: relative;
+    top: -62px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Results .one-Results p{
+    background-color: brown;
+    width: fit-content;
+    padding: 10px;
+    margin-top: -20px;
+    font-weight: bold;
+    
+    position: relative;
+}
+@media (max-width: 768px) {
+    .Results .one-Results{
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    }
+    .Results .one-Results .name-one{
+        top: 90px;
+        left: -140px;
+        width: fit-content;
+    }
+    .Results .one-Results .name-three{
+        left: -140px;
+        top: -80px;
+    
+        width: fit-content;
+    }
+    .Results .one-Results .name-back{
+        width: fit-content;
+        left: -120px;
+        top: 0px;
+        font-size: 18px;
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+.Results .plus{
+    position: relative;
+    transition: .5s;
+    
+}
+.Results .plus .not {
+    display: none;
+    
+}
+.Results .plus::before{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    position: absolute;
+    background-color: transparent;
+    content: "";
+    padding: 3.2px;
+    transition: .3s;
+
+}
+.Results .plus:hover :not(:last-child) p{
+    transform: rotatey(180deg);
+    background-color: white;
+    transition: .5s;
+
+}
+.Results .plus:hover :not(:last-child) p{
+    color: transparent;
+    background-color: transparent;
+    transition: .5s;
+
+}
+.Results .plus:hover span{
+    color: transparent;
+    background-color: transparent;
+    transition: .5s;
+
+}
+.Results .plus:hover .not{
+    background-color: transparent;
+    width: 720px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    font-size: 25px;
+    top: -100px;
+    color: rgb(255, 255, 255);
+    line-height: 2;
+    font-weight: normal;
+    transition: .5s;
+
+}
+.Results .plus:hover img{
+    opacity: 0;
+
+}
+@media (max-width: 768px) {
+    .Results .plus:hover .not{
+        width: 400px;
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+.news{
+    margin-top: 80px;
+}
+.news .cards {
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 90px;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 500px);
+    gap:  30px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.news .cards img{
+    min-width: 100%;
+}
+.news .cards .one-cards  .dif{
+    height: 324px;
+}
+.news .cards .one-cards p{
+    width: 460px;
+    text-align: center;
+    padding: 25px;
+    color: white;  
+    line-height: 1.8; 
+    margin: 0;
+    font-size: 25px;
+    transition: .3s;
+}
+.news .cards .one-cards{
+    background-color: rgb(51, 51, 51);   
+}
+.news .cards .one-cards  a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.news .cards .one-cards  a p:hover{
+    color: rgb(173, 221, 0);
+}
+@media (max-width: 768px) {
+    .news .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .news .cards .one-cards p{
+        padding: 22px;
+        width: 320px;
+
+        margin: 0;
+    }
+    .news .cards .one-cards{}
+    .news .cards  img{
+        width: 20px;
+    }
+}
+.gools{
+    margin-top: 90px;
+    margin-bottom: 220px;
+}
+.gools .pleyers-gols {
+    display: grid;
+    grid-template-columns: repeat(6, 200px);
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
+    
+}
+.gools .pleyers-gols .one-player{
+    text-align: center;
+}
+.gools .pleyers-gols .one-player h1{
+    background-color: orangered;
+    padding: 15px;
+    width: 200px;
+}
+.gools .pleyers-gols .one-player h3{
+    position: relative;
+    left: -9%;
+    text-align: center;
+}
+.gools .pleyers-gols .one-player i {
+    position: relative;
+    left: -9%;
+}
+.end{
+    width: 200px;
+    background-color: rgb(5, 61, 192);
+    height: 3px;
+    border: none;
+    position: relative;
+    left: -9%;
+}
+.gools-big{
+    margin-top: 120px;
+    font-size: 100px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .gools .pleyers-gols{
+        display: flex;
+        flex-direction: column;
+    }
+    .gools img{
+        margin-top: 60px;
+    }
+    .end{
+        left: 0;
+    }
+    .gools .pleyers-gols .one-player h3,p{
+        left: 0;
+    }
+    .gools .pleyers-gols .one-player i{
+        left: 0;
+    }
+    .gools-big{
+        font-size: 70px;
+    }
+    }
+/* .list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+table{
+    border: 4px solid rgb(255, 255, 255);
+    border-spacing: 30px;
+    font-size: 40px;
+    background-color: rgb(38, 38, 38);
+    color: white;
+    width: 2000px;
+
+}
+tr {
+    border: 4px solid rgb(205, 205, 0);
+}
+th{
+    background-color: brown;
+    padding: 20px;
+}
+td{
+    padding: 30px;
+    border: 5px solid rgb(255, 255, 255);
+    
+}
+.bigg{
+    width: 500px;
+}
+@media (max-width: 768px) {
+    table{
+        width: 300px;
+        
+    }
+    tr {
+        border: 4px solid rgb(205, 205, 0);
+        width: 50px;
+
+    }
+    th{
+        background-color: brown;
+        width: 50px;
+
+    }
+    td{
+        width: 50px;
+        border: 5px solid rgb(255, 255, 255);
+        
+    }
+    
+} */
+.list{
+
+}
+.list .in-list{
+    display: grid;
+    grid-template-columns: repeat(6, 300px);
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(0, 201, 194) 0%, rgb(171, 113, 6) 35%, rgba(0,212,255,1) 100%);
+ 
+}
+@media (max-width: 768px) {
+    .list .in-list{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        font-size: 12px;
+        }
+        .list .in-list h3{
+            text-align: center;
+        }
+        .two .two-two{
+        }
+}
+.alone{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-left: 0;
+}
